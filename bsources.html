@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B-Sources - VentureMind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="VentureMind Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="bsources.html">B-Sources</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- HERO -->
+<main id="bsources-hero">
+    <h1>📚 VentureMind B-School Reading Library</h1>
+    <p>
+        Curated premium reading materials inspired by Harvard Business Review,
+        consulting frameworks, and real-world business thinking.
+    </p>
+
+    <!-- Search Bar -->
+    <input 
+        type="text" 
+        id="searchInput" 
+        placeholder="🔍 Search reading materials..."
+        onkeyup="searchResources()"
+        class="search-bar"
+    >
+</main>
+
+<section id="bsources-library">
+
+    <!-- ⭐ FEATURED RESOURCE (Premium Spotlight) -->
+    <div class="featured-resource">
+        <div class="featured-left">
+            <span class="featured-tag">Featured Reading</span>
+            <h2>📘 Introduction to Business Frameworks</h2>
+            <p>
+                The core foundation of VentureMind learning. Covers strategic thinking,
+                key business frameworks, and concepts taught in top B-schools like IIMs and HBR classrooms.
+            </p>
+
+            <div class="featured-buttons">
+                <a href="resources/B-source reading material.pdf" target="_blank" class="primary-btn">
+                    📖 Read Now
+                </a>
+                <a href="resources/B-source reading material.pdf" download class="secondary-btn">
+                    ⬇ Download
+                </a>
+            </div>
+        </div>
+
+        <div class="featured-right">
+            <div class="pdf-preview">
+                📚 Premium Reading Material
+            </div>
+        </div>
+    </div>
+
+    <!-- 📚 LIBRARY LIST (Elite Style) -->
+    <div class="library-list">
+
+        <h2 class="library-title">VentureMind Reading Library</h2>
+
+       <div class="library-item locked-item">
+    <div class="library-info">
+        <h3>🧠 HBR: Skills and Habits Aspiring CEOs Need 🔒</h3>
+        <span class="library-tag premium">Premium • Leadership</span>
+    </div>
+<button class="locked-link" onclick="unlockPopup()">
+    🔒 Unlock
+</button></div>
+
+       <div class="library-item locked-item">
+    <div class="library-info">
+        <h3>🚀 10 Ways to Supercharge Your Career 🔒</h3>
+        <span class="library-tag premium">Premium • Career</span>
+    </div>
+<button class="locked-link" onclick="unlockPopup()">
+    🔒 Unlock
+</button></div>
+
+      <div class="library-item locked-item">
+    <div class="library-info">
+        <h3>🏢 CEOs Need to Become Supply Chain Experts 🔒</h3>
+        <span class="library-tag premium">Premium • Strategy</span>
+    </div>
+<button class="locked-link" onclick="unlockPopup()">
+    🔒 Unlock
+</button></div>
+
+        <div class="library-item">
+            <div class="library-info">
+                <h3>💡 Risks of Offering Free Goods & Services</h3>
+                <span class="library-tag">Business Model</span>
+            </div>
+            <a href="resources/HBR The Risks of Offering Free Goods and Services.pdf" target="_blank" class="read-link">
+                Read →
+            </a>
+        </div>
+
+        <div class="library-item">
+            <div class="library-info">
+                <h3>📊 Spendception Article</h3>
+                <span class="library-tag">Research Article</span>
+            </div>
+            <a href="resources/Article Spendception.pdf" target="_blank" class="read-link">
+                Read →
+            </a>
+        </div>
+
+        <div class="library-item">
+            <div class="library-info">
+                <h3>📚 Evolution of Business Market (Book)</h3>
+                <span class="library-tag">Book</span>
+            </div>
+            <a href="resources/Evolution of Business Market Book.pdf" target="_blank" class="read-link">
+                Read →
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function searchResources() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let cards = document.getElementsByClassName("resource-card");
+
+    for (let i = 0; i < cards.length; i++) {
+        let text = cards[i].innerText.toLowerCase();
+        if (text.includes(input)) {
+            cards[i].style.display = "block";
+        } else {
+            cards[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>

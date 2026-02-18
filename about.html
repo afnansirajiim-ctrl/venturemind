@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - VentureMind</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<header>
+    <div class="nav-container">
+        <div class="logo">
+            <img src="images/logo.png" alt="VentureMind Logo">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="programs.html">Programs</a></li>
+                <li><a href="bsources.html">B-Sources</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="about-main">
+    <div class="about-box">
+        <h1>About <span class="mind-blue">VentureMind</span></h1>
+
+        <p class="about-intro">
+            VentureMind is a premium business learning platform designed to bring
+            IIM-style business thinking to ambitious students from Tier 2 and Tier 3 cities.
+        </p>
+
+        <div class="about-grid">
+            <div class="about-card">
+                <h3>🎯 Our Mission</h3>
+                <p>
+                    To provide early exposure to real-world business frameworks,
+                    strategic thinking, and leadership skills through structured sessions,
+                    case studies, and exclusive learning materials.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>🚀 Our Vision</h3>
+                <p>
+                    To build India’s most accessible business learning ecosystem
+                    for future MBA aspirants and young entrepreneurs.
+                </p>
+            </div>
+
+            <div class="about-card">
+                <h3>📚 VentureMind Club</h3>
+                <p>
+                    Through VentureMind Club, students get access to exclusive
+                    Top B-School reading materials, live sessions, and a powerful
+                    community of future business leaders.
+                </p>
+            </div>
+        </div>
+    </div>
+</main>
+
+/* ===== ABOUT PAGE PREMIUM DESIGN ===== */
+.about-main {
+    padding-top: 160px; /* space for fixed navbar */
+    padding-bottom: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-box {
+    max-width: 900px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 50px 60px;
+    border-radius: 20px;
+    backdrop-filter: blur(12px);
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+    text-align: center;
+}
+
+/* Title */
+.about-box h1 {
+    font-size: 48px;
+    margin-bottom: 25px;
+}
+
+/* Make "Mind" blue like logo */
+.mind-blue {
+    color: #4ea3ff;
+}
+
+/* Intro paragraph */
+.about-intro {
+    font-size: 20px;
+    line-height: 1.8;
+    margin-bottom: 50px;
+    color: #dbe3ff;
+}
+
+/* Grid layout */
+.about-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+/* Cards */
+.about-card {
+    background: rgba(20, 38, 92, 0.6);
+    padding: 30px;
+    border-radius: 16px;
+    text-align: left;
+    transition: 0.3s ease;
+    border: 1px solid rgba(78, 163, 255, 0.2);
+}
+
+.about-card h3 {
+    margin-bottom: 15px;
+    font-size: 22px;
+}
+
+.about-card p {
+    font-size: 16px;
+    line-height: 1.7;
+    color: #e6ecff;
+}
+
+.about-card:hover {
+    transform: translateY(-8px);
+    border-color: #4ea3ff;
+    box-shadow: 0 15px 40px rgba(78, 163, 255, 0.15);
+}
